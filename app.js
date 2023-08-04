@@ -35,7 +35,7 @@ const ejsMate = require('ejs-mate');
 const passport = require('passport');
 const LocalStrategy = require('passport-local'); // authentication
 const User = require('./models/user');
-const MongoStore = require("connect-mongo")(session);
+const MongoStore = require("connect-mongo");
 
 // ------- MONGO SANITIZE-----------------
 
@@ -143,7 +143,7 @@ app.use(mongoSanitize({
 // storing sessions to MongoDB
 const store = new MongoStore({
     // url: "mongodb://localhost:27017/yelp-camp",
-    url: db_url,
+    mongoUrl: db_url,
     secret: 'shhhhhhhhhhhhhhhhhhh',
     touchAfter: 24*60*60
 })
