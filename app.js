@@ -141,7 +141,7 @@ app.use(mongoSanitize({
 }))
 
 // storing sessions to MongoDB
-const store = new MongoStore({
+const store = MongoStore.create({
     // url: "mongodb://localhost:27017/yelp-camp",
     mongoUrl: db_url,
     secret: 'shhhhhhhhhhhhhhhhhhh',
