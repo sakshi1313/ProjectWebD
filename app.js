@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
 const { validate } = require('./models/campground');
 
-// app.use(helmet({contentSecurityPolicy: false }))
+app.use(helmet({contentSecurityPolicy: false }))
 
 
 const scriptSrcUrls = [
